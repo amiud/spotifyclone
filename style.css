@@ -170,6 +170,7 @@ div.button button.start1:hover
     background-color: black;
     transform: scale(1.05);
     border: 2px solid black;
+    cursor: pointer;
 }
 div.button button.vp
 {
@@ -188,6 +189,7 @@ div.button button.vp:hover
 {
     background-color: #1D75DE;
     transform: scale(1.05);
+    cursor: pointer;
 }
 div.aproveite aside
 {
@@ -370,6 +372,7 @@ button.start2:hover
 {
     background-color: black;
     border: 2px solid black;
+    cursor: pointer;
     transform: scale(1.05);
     padding: 12px 32px;
 }
