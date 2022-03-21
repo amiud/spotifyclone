@@ -43,7 +43,7 @@ div.perfil
     font-size: 15px;
     font-weight: bold;
 }
-div.perfil:hover
+label:hover
 {
     cursor: pointer;
 }
