@@ -57,6 +57,7 @@ label::after
     content: '⤵';
     font-size: 10px;
     padding-left: 10px;
+    transition: content 1s linear;
 }
 input:checked + div.perfil label::after
 {
@@ -102,11 +103,13 @@ span.acc:hover
 {
     cursor: pointer;
     color: rgb(31, 187, 31);
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.08);
 }
 span.leave:hover
 {
     cursor: pointer;
     color: rgb(31, 187, 31);
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.08);
 }
 nav span
 {
