@@ -37,6 +37,10 @@ nav a.navitem
     text-decoration: none;
     padding-right: 20px;
 }
+.navitem:hover
+{
+    color: rgb(31, 187, 31);
+}
 div.perfil
 {
     display: inline;
@@ -46,6 +50,7 @@ div.perfil
 label:hover
 {
     cursor: pointer;
+    color: rgb(31, 187, 31);
 }
 label::after
 {
