@@ -98,6 +98,7 @@ span.acc
     margin: 15px 100px 10px 15px;
     text-align: left;
     font-weight: 700;
+    font-size: 18px;
 }
 span.leave
 {
@@ -107,6 +108,7 @@ span.leave
     margin: 10px 118.86px 15px 15px;
     text-align: left;
     font-weight: 700;
+    font-size: 18px;
 }
 span.acc:hover
 {
@@ -138,6 +140,7 @@ div.aproveite
 div.aproveite article
 {
     max-width: 1160px;
+    padding: 0 40px;
     margin: auto;
 }
 div.aproveite h1
@@ -176,8 +179,18 @@ div.button button.start1
 div.button button.start1:hover
 {
     background-color: black;
-    transform: scale(1.05);
+    padding: 18px 36px;
     border: 2px solid black;
+    top: -3px;
+    left: -6px;
+    cursor: pointer;
+}
+.start1:active
+{
+    transform: scale(0.9);
+    outline: 4px solid black;
+    outline-offset: 5px;
+    transition: all 0.1s ease-in-out;
 }
 div.button button.vp
 {
@@ -195,7 +208,17 @@ div.button button.vp
 div.button button.vp:hover
 {
     background-color: #1D75DE;
-    transform: scale(1.05);
+    padding: 18px 36px;
+    left: 144px;
+    top: -3px;
+    cursor: pointer;
+}
+.vp:active
+{
+    transform: scale(0.9);
+    outline: 4px solid black;
+    outline-offset: 5px;
+    transition: all 0.1s ease-in-out;
 }
 div.aproveite aside
 {
@@ -215,6 +238,7 @@ div.pq
 div.pq > article
 {
     max-width: 1160px;
+    padding: 0 40px;
     margin: auto;
 }
 div.pq h1
@@ -259,6 +283,7 @@ div.principal
 div.principal > article
 {
     max-width: 1160px;
+    padding: 0 40px;
     margin: auto;
 }
 div.principal > article > h1
@@ -338,14 +363,29 @@ button.start2
 {
     position: absolute;
     top: 587px;
-    left: 22.5px;
+    left: 50%;
+    transform: translate(-50%, 0);
     background-color: rgb(25, 20, 20);
     color: white;
-    width: 230px;
-    padding: 10px 30px;
+    padding: 10px 60px;
     border: 2px solid rgb(25, 20, 20);
     border-radius: 60px;
     font-weight: 900;
+}
+button.start2:hover
+{
+    background-color: black;
+    border: 2px solid black;
+    padding: 14px 70px;
+    top: 583px;
+    cursor: pointer;
+}
+.start2:active
+{
+    transform: translate(-50%, 0) scale(0.9);
+    outline: 4px solid black;
+    outline-offset: 5px;
+    transition: all 0.1s ease-in-out;
 }
 section.s1 > aside
 {
@@ -374,14 +414,6 @@ div.planos > section > aside > a
 {
     color: rgb(92, 92, 92);
 }
-button.start2:hover
-{
-    background-color: black;
-    border: 2px solid black;
-    transform: scale(1.05);
-    padding: 12px 32px;
-    top: 585px;
-}
 footer
 {
     background-color: black;
@@ -391,5 +423,80 @@ footer
 footer > a.home > img
 {
     width: 150px;
-    padding: 100px;
+    padding: 20px 100px;
+}
+@media screen and (max-width: 1280px) 
+{
+    div.vantagens
+    {
+        display: block;
+        text-align: center;
+    }
+    div.vantagens section
+    {
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px;
+    }
+    div.planos
+    {
+        display: block;
+        text-align: center;
+    }
+    div.planos section
+    {
+        display: inline-block;
+        text-align: left;
+        margin: 60px;
+    }
+    header
+    {
+        display: block;
+        text-align: center;
+        padding: 20px 40px;
+    }
+    img.logo
+    {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0;
+        padding-right: 50px;
+    }
+    header > nav
+    {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0;
+    }
+    p.hide
+    {
+        top: 45px;
+    }
+}
+@media screen and (max-width: 1188px) 
+{
+    div.vantagens section
+    {
+        width: 350px;
+    }
+}
+@media screen and (max-width: 839px) 
+{
+    div.vantagens section
+    {
+        width:  300px;
+    }
+}
+@media screen and (max-width: 625px) 
+{
+    img.logo
+    {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 50px 20px 50px;
+    }
+    p.hide
+    {
+        top: 35px;
+    }
 }
