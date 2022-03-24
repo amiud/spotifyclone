@@ -63,13 +63,14 @@ label:hover
 }
 label::after
 {
-    content: '⤵';
-    font-size: 10px;
+    content: '↓';
+
+    font-size: 20px;
     padding-left: 10px;
 }
 input:checked + div.perfil label::after
 {
-    content: '⤴'
+    content: '↑'
 }
 p.hide
 {
@@ -90,6 +91,24 @@ input:checked + div.perfil p.hide
 {
     display: none;
 }
+span.pr
+{
+    display: none;
+    font-weight: 700;
+    font-size: 18px;
+}
+span.sp
+{
+    display: none;
+    font-weight: 700;
+    font-size: 18px;
+}
+span.dl
+{
+    display: none;
+    font-weight: 700;
+    font-size: 18px;
+}
 span.acc
 {
     display: block;
@@ -109,6 +128,24 @@ span.leave
     text-align: left;
     font-weight: 700;
     font-size: 18px;
+}
+span.pr:hover
+{
+    cursor: pointer;
+    color: rgb(31, 187, 31);
+    text-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+span.sp:hover
+{
+    cursor: pointer;
+    color: rgb(31, 187, 31);
+    text-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+span.dl:hover
+{
+    cursor: pointer;
+    color: rgb(31, 187, 31);
+    text-shadow: 0 0 10px rgba(0, 0, 0, .2);
 }
 span.acc:hover
 {
@@ -493,11 +530,120 @@ footer > a.home > img
     {
         display: inline-block;
         vertical-align: middle;
-        padding: 0 50px 20px 50px;
+        height: 31px;
+        width: auto;
     }
     p.hide
     {
         top: 35px;
+    }
+    header
+    {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+    header > nav > .navitem
+    {
+        display: none;
+    }
+    header > nav > .navitem + span
+    {
+        display: none;
+    }
+    header > .home > .logo
+    {
+        padding: 0;
+        justify-content: space-between;
+    }
+    .perfil > .labellink > label
+    {
+        visibility: hidden;
+    }
+    .perfil > .labellink > label:after
+    {
+        visibility: visible;
+        content: '⊕';
+        font-size: 25px;
+    }
+    input:checked + div.perfil label::after
+    {
+        content: '⊗'
+    }
+    p.hide
+    {
+        position: sticky;
+    }
+    input:checked + div.perfil > p.hide
+    {
+        display: block;
+    }
+    p.hide > span
+    {
+        position: absolute;
+        color: white;
+        background-color: rgb(43, 43, 43);
+        margin: 0;
+    }
+    span.pr
+    {
+        display: block;
+        top: -41px;
+        left: -80px;
+        width: 100px;
+        text-align: left;
+        padding: 5px 10px 0 10px;
+        border: 1px solid rgb(27, 27, 27);
+        border-bottom: 0;
+        border-radius: 5px 5px 0 0;
+    }
+    span.sp
+    {
+        display: block;
+        top: -16.67px;
+        left: -80px;
+        width: 100px;
+        text-align: left;
+        padding: 0 10px;
+        border: 1px solid rgb(27, 27, 27);
+        border-top: 0;
+        border-bottom: 0;
+    }
+    span.dl
+    {
+        display: block;
+        top: 4.34px;
+        left: -80px;
+        width: 100px;
+        text-align: left;
+        padding: 0 10px;
+        border: 1px solid rgb(27, 27, 27);
+        border-top: 0;
+        border-bottom: 0;
+    }
+    span.acc
+    {
+        display: block;
+        top: 24.01px;
+        left: -80px;
+        width: 100px;
+        text-align: left;
+        padding: 0 10px;
+        border: 1px solid rgb(27, 27, 27);
+        border-top: 0;
+        border-bottom: 0;
+    }
+    span.leave
+    {
+        display: block;
+        top: 44.68px;
+        left: -80px;
+        width: 100px;
+        text-align: left;
+        padding: 0 10px 5px 10px;
+        border: 1px solid rgb(27, 27, 27);
+        border-top: 0;
+        border-radius: 0 0 5px 5px;
     }
 }
 @media screen and (max-width: 500px)
@@ -513,32 +659,13 @@ footer > a.home > img
     {
         width:  200px;
     }
-    header
+    div.button
     {
-        padding: 5px 5px;
-    }
-    header > nav > a.navitem
-    {
-        font-size: 3vw;
-    }
-    header > nav > div.perfil > a > label
-    {
-        font-size: 3vw;
-    }
-    p.hide
-    {
-        top: 27px;
-        left: 80%;
-        width: fit-content;
-    }
-    p.hide span
-    {
-        padding-right: 5px;
-        margin: 5px;
+        height: 87px;
     }
     div.button > button.start1
     {
-        font-size: 2.1vw;
+        width: 100%;
         padding: 7px 14px;
     }
     div.button button.start1:hover
@@ -547,21 +674,22 @@ footer > a.home > img
         padding: 8px 16px;
         border: 2px solid black;
         top: -1px;
-        left: -2px;
+        left: 0;
         cursor: pointer;
     }
     div.button > a > button.vp
     {
-        font-size: 2.1vw;
+        width: 100%;
         padding: 7px 14px;
-        left: 100px;
+        top: 50px;
+        left: 0;
     }
     div.button > a > button.vp:hover
     {
         background-color: #1D75DE;
         padding: 8px 16px;
-        left: 98px;
-        top: -1px;
+        top: 49px;
+        left: 0;
         cursor: pointer;
     }
 }
@@ -579,36 +707,11 @@ footer > a.home > img
     {
         padding: 20px 0;
     }
-    div.button > button.start1
-    {
-        font-size: 3vw;
-    }
-    div.button > a > button.vp
-    {
-        font-size: 3vw;
-    }
 }
 @media screen and (max-width: 320px)
 {
     div.vantagens section
     {
         width:  200px;
-    }
-    header
-    {
-        padding: 5px 5px;
-    }
-    header > nav > a.navitem
-    {
-        font-size: 3vw;
-    }
-    header > nav > div.perfil > a > label
-    {
-        font-size: 3vw;
-    }
-    p.hide
-    {
-        top: 27px;
-        left: 78%;
     }
 }
